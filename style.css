@@ -1,0 +1,75 @@
+:root{
+  --bg:#0b1220;--muted:#8aa0bf;--text:#e8f1ff;
+  --brand:#0ea5e9;--brand2:#22d3ee;--border:rgba(255,255,255,.1)
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:linear-gradient(180deg,#0b1220 0%,#0b1426 60%,#0b1220 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* header */
+.header{position:sticky;top:0;background:rgba(11,18,32,.65);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 0 14px var(--brand)}
+.nav a{padding:10px 12px;border-radius:10px;border:1px solid transparent}
+.nav a.cta{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#00223a;font-weight:700}
+
+/* hero */
+.hero{padding:72px 0 30px;position:relative}
+.badge{display:inline-flex;gap:8px;align-items:center;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);color:#86eaff;border-radius:999px;padding:6px 10px;font-weight:700;font-size:13px}
+.hero h1{font-size:40px;line-height:1.1;margin:12px 0 10px;font-weight:800}
+.sub{color:var(--muted);font-size:18px;max-width:720px}
+.actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+.btn{padding:12px 16px;border-radius:12px;border:1px solid var(--border);display:inline-flex;gap:8px;align-items:center;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{border:none;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#00223a}
+.btn.ghost{color:#bfe7ff}
+
+/* slider */
+.slider{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--border);position:relative}
+.slides{display:flex;transition:transform .5s ease}
+.slide{min-width:100%;height:320px;background:#09101e center/cover no-repeat}
+.ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:1px solid var(--border);backdrop-filter:blur(4px);color:#fff;border-radius:10px;padding:8px 10px;cursor:pointer}
+.prev{left:10px} .next{right:10px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.dot{width:8px;height:8px;border-radius:50%;background:#5f7395;cursor:pointer;transition:.2s}
+.dot.active{background:#bfe7ff;transform:scale(1.2)}
+
+/* sections */
+.section{padding:46px 0}
+.grid-2{display:grid;gap:22px}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;padding:18px}
+.panel h2{margin:0 0 10px}
+
+/* tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.tab{padding:10px 12px;border-radius:10px;border:1px solid var(--border);cursor:pointer;color:#bfe7ff;background:transparent}
+.tab.active{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#00223a;border:none;font-weight:700}
+.tab-content{color:var(--muted)}
+
+/* chips & ticks */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;color:#b6c7e4;font-size:13px}
+.ticks{margin:10px 0 0 0;padding:0}
+.ticks li{list-style:none;padding-left:22px;position:relative;margin:8px 0}
+.ticks li:before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+
+/* cards proiecte */
+.cards{display:grid;gap:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;padding:18px;transition:.2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,.25)}
+.card h3{margin:0 0 6px}
+
+/* footer */
+.footer{padding:26px 0 40px;color:#95a9c9}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.sm{display:flex;gap:14px}
+
+/* responsive */
+@media(min-width:720px){
+  .hero h1{font-size:52px}
+  .grid-2{grid-template-columns:1.2fr .8fr}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .slide{height:420px}
+}
