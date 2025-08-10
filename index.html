@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaTech Digital — Dezvoltare web & soluții IT</title>
+  <meta name="description" content="Aplicații web rapide, design modern, automatizări și consultanță IT.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0ea5e9">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand"><span class="dot"></span> NovaTech Digital</div>
+    <nav>
+      <a href="#servicii">Servicii</a>
+      <a href="#proiecte">Proiecte</a>
+      <a class="cta" href="#contact">Cere ofertă</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">⚡ Site-uri rapide • design modern • interactiv</span>
+      <h1>Construim aplicații web care arată bine și convertesc.</h1>
+      <p class="sub">Landing pages, site-uri de prezentare și microaplicații cu performanță mare. Focus pe UX curat, animații discrete și integrare (CRM, Analytics, SEO).</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Solicită o ofertă</a>
+        <a class="btn ghost" href="#proiecte">Vezi proiecte</a>
+      </div>
+
+      <!-- SLIDER -->
+      <div class="slider" aria-label="galerie imagini">
+        <button class="ctrl prev" aria-label="Precedent">‹</button>
+        <div class="slides">
+          <!-- imaginile sunt încărcate din script.js -->
+        </div>
+        <button class="ctrl next" aria-label="Următor">›</button>
+      </div>
+      <div class="dots" role="tablist" aria-label="Indicator slide"></div>
+    </div>
+  </section>
+
+  <!-- SERVICII + TABURI -->
+  <section id="servicii" class="section">
+    <div class="container grid-2">
+      <div class="panel">
+        <h2>Servicii</h2>
+        <div class="tabs">
+          <button class="tab active" data-key="design">Design & Front-end</button>
+          <button class="tab" data-key="landing">Landing Pages</button>
+          <button class="tab" data-key="mkt">Marketing & Analytics</button>
+        </div>
+        <div id="tab-content" class="tab-content"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Tehnologii</h2>
+        <div class="chips">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>Canva</span><span>Photoshop Express</span>
+          <span>GitHub Pages</span><span>GA4</span><span>Google Ads (basic)</span>
+        </div>
+        <ul class="ticks">
+          <li>Deployment gratuit pe GitHub Pages</li>
+          <li>SEO on-page & tag-uri Analytics</li>
+          <li>Formulare mailto sau servicii externe</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROIECTE -->
+  <section id="proiecte" class="section">
+    <div class="container">
+      <h2>Proiecte demonstrative</h2>
+      <p class="sub">Înlocuiește linkurile după publicare pe GitHub Pages.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Pagina de prezentare — Agenție IT</h3>
+          <small>HTML • CSS • JS • Slider + Taburi</small>
+          <p>Landing page cu elemente interactive și performanță bună.</p>
+          <a class="btn" href="#" onclick="alert('Pune aici linkul acestui demo, după ce îl publici.');return false;">Deschide</a>
+        </article>
+        <article class="card">
+          <h3>„One product shop” — Demo</h3>
+          <small>HTML • CSS • JS</small>
+          <p>Pagină de produs cu CTA, beneficii, testimoniale.</p>
+          <a class="btn" href="#" onclick="alert('Pune aici linkul celui de-al doilea demo.');return false;">Deschide</a>
+        </article>
+        <article class="card">
+          <h3>Mini tool — Calculator preț</h3>
+          <small>JavaScript pur</small>
+          <p>Calculator ofertă (preț × cantitate) cu validare.</p>
+          <a class="btn" href="#" onclick="alert('Al treilea link, dacă dorești.');return false;">Deschide</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container grid-2">
+      <div class="panel">
+        <h2>Hai să lucrăm împreună</h2>
+        <p class="sub">Spune obiectivul tău (ex. „landing page în 7 zile”) și îți trimit o propunere.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:tomita.pirvu01@gmail.com?subject=Cerere%20oferta%20—%20NovaTech%20Digital">Trimite email</a>
+          <a class="btn" href="tel:+40784479445">Sună acum</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Date rapide</h2>
+        <ul class="ticks">
+          <li>Timp tipic de livrare: 5–10 zile</li>
+          <li>Garanție bug-fix: 30 de zile</li>
+          <li>Raport simplu de performanță</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span id="y"></span> NovaTech Digital • Brașov</div>
+    <div class="sm">
+      <a href="#" onclick="alert('Pune linkul tău GitHub.');return false;">GitHub</a>
+      <a href="#" onclick="alert('Pune linkul tău LinkedIn.');return false;">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
